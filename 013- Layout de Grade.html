@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+    /*Grid é um modelo de layout, que permite dividir uma área em colunas e linhas,
+    fornecendo o controle sobre a estrutura do layout bidimensional
+    Diferença principal entre Flexões e Grid:
+
+     Flexbox: Trabalha em uma dimensão
+    (alinhamento de itens em linha ou coluna).
+    
+    Grid: Trabalha em duas dimensões
+    (Linhas e colunas simultaneamente*/
+      
+    .grid-container{
+        display: grid;/*Define o container com Grid(grade)*/
+        grid-template-columns: repeat(3, 1fr); /*Cria colunas de largura igual*/
+        grid-template-rows: auto;/*O numero de linhas é automático, baseado no conteúdo*/
+        gap: 20px;
+        padding: 20px;
+
+    }
+
+    .grid-item{
+        background-color: lightskyblue;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px;
+        transition: transform 0.3% ease;       
+    }
+    .grid-item:hover{
+        transform: scale(1.05);
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">item 1</div>
+        <div class="grid-item">item 2</div>
+        <div class="grid-item">item 3</div>
+        <div class="grid-item">item 4</div>
+        <div class="grid-item">item 5</div>
+        <div class="grid-item">item 6</div>
+        </div>
+    
+</body>
+</html>

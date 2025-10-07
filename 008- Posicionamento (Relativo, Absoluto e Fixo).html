@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com Box Model e Posicionamento</title>
+    <style>
+        .caixa-relative {
+        
+        width: 300px;
+        padding: 20px;
+        border: 5px solid paleturquoise;
+        margin: 30px;
+        background-color: royalblue;
+        position: relative;
+        }
+        
+        .caixa-absolute{
+            position: absolute;
+            top: 170px;
+            left: 50px;
+            width: 200px;
+            height: 150px;
+            background-color: yellow;
+        }
+
+        .caixa-fixed{
+            position: fixed;
+            top: 1;
+            left: 20;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caixa-relative">Caixa com posicionamento Relative.(O elemento se move em relação ao seu local normal no
+        fluxo do documento)</div>
+    <div class="caixa-absolute">Caixa com posicionamento Absolute. (Quando um elemento é posicionado como absolute, ele
+        é retirado do fluxo normal do documento
+        e posicionado em relação ao elemento pai com position: relative)</div>
+    <div class="caixa-fixed">Caixa com posicionamento Fixed.(O elemento permanece fixo na tela mesmo quando a página é
+        rolada)
+    </div>
+</body>
+
+</html>

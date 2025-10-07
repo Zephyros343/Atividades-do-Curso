@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Botões com efeitos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    /*1. Brilho Flutuante*/
+    .shine-button {
+      background-color: rgb(250, 7, 7);
+      color: gainsboro;
+      border: none;
+      padding: 11px 30px;
+      text-transform: uppercase;
+      /*Deixa todas as letras em maiúsculo*/
+      font-weight: bold;
+      position: relative;
+      overflow: hidden;
+      margin: 10px;
+    }
+
+    .shine-button::before {
+      /*usa ::before para adicionar icones, efeitos visuais, decorações ou estilizações adicinais*/
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, grey, transparent);
+      transform: skewX(-25deg);
+      /*usada para inclinar (ou "distorcer") um elemento horizontalmente em 25 graus para a esquerda(por isso o valor negativo)*/
+    }
+
+    .shine-button:hover::before {
+      left: 125%;
+      transition: left 0.75s ease;
+    }
+
+    /*2. Botão Arredondado*/
+    .rounded-btn{
+      padding: 12px 30px;
+      background-color: yellow;
+      color: none;
+      border: none;
+      font-size: 18px;
+      margin: 10px;
+      transition: background 0.5s ease;
+      border-radius: 50px;
+    }
+    .rounded-btn:hover{
+      background-color: rgb(105, 107, 6);
+    }
+
+    /*2. Efeito 3D*/
+    .press-btn{
+      background-color: green;
+      color: aliceblue;
+      padding: 15px 35px;
+      border: none;
+      font-size: 18px;
+      box-shadow: 0 4px black;
+      margin: 10px;
+      transition: all 0.1s ease-in-out; /*Usada para animar mudanças suaves nas propriedades de um elemento*/
+    }
+
+    .press-btn:active{
+      transform: translateY(4px); /*Move o elemento verticalmente para baixo em 4px*/
+      box-shadow: none;
+
+    }
+   
+    /*4.Deslizante*/
+    .slide-right-btn{
+      background: transparent;
+      color: blue;
+      padding: 15px 35px;
+      border: 2px solid blue;
+      font-size: 18px;
+      position:relative;
+      overflow: hidden;
+      z-index: 1;
+      margin: 10px;
+    }
+
+    .slide-right-btn::before{
+      content:"";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: blue;
+      z-index: -1;
+      transition: left 0.4s ease;
+    }
+    .slide-right-btn:hover::before{
+   left: 0;
+    }
+    .slide-right-btn:hover{
+      color: azure;
+    }
+    /*4. Efeito Neon*/
+    .neon-btn{
+      background-color: rgb(68, 4, 44);
+      color: rgb(155, 235, 80);
+      padding: 15px 35px;
+      border: 2px solid brown;
+      box-shadow: 0 0 10px lightseagreen,
+      0 0 40px blue, 0 0 80px red;
+      transition: 0.3s ease;
+      margin: 10px;
+    }
+
+    .neon-btn:hover{
+      background: rgb(8, 202, 111);
+      color: rgb(243, 220, 10);
+      box-shadow: none;
+    }
+
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <h2>1. Botão com Efeito de Brilho Flutuante</h2>
+  <button class="shine-button">Brilho</button>
+
+  <h2>2. Botão Arredondado</h2>
+  <button class="rounded-btn">Clique Aqui</button>
+
+  <h2>3. Botão com Efeito 3D</h2>
+  <button class="press-btn">Pressione</button>
+
+  <h2>4. Botão Deslizante para a Direita</h2>
+  <button class="slide-right-btn">Deslizar</button>
+
+  <h2>5. Botão Efeito Neon</h2>
+  <button class="neon-btn">Neon</button>
+</body>
+
+</html>

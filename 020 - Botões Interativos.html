@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões Interativos</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+
+
+        .btn{
+            padding: 12px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease; 
+        }
+
+      /*Botão 1: Sombra, Zoom e troca de cor */
+        .btn1{
+            background-color: lightskyblue;
+        }
+        .btn1:hover{
+            transform: scale(1.1);
+            background-color: lightblue;
+            box-shadow: 0 8px 16px black;
+        }
+
+        /*Botão 2: Inversão de cor e cursor*/
+        .btn2{
+            background-color: white;
+            color: black;
+            border: 2px solid lightskyblue;
+            
+        }
+
+
+        .btn2:hover{
+            background-color: lightskyblue;
+            color: black;
+        }
+
+        /*Botão 3: Deslize com troca de fundo*/
+        .btn3{
+           background-color: lightskyblue;
+           position: relative;
+           padding: 10px 60px;
+           overflow: hidden;
+        }
+
+        .btn3::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: lightslategray;
+            transition: left 0.3s ease;
+        }
+
+        .btn3:hover::before{
+           left: 0;
+        }
+        
+        .btn3:hover{
+            background-color: lightskyblue;
+            color: black;
+        }
+        /*Botão 4: Rotação com troca de cor*/
+        .btn4{
+            background-color: lightskyblue;
+            border-radius: 50px;
+            padding: 10px 60px;
+        }
+
+        .btn4:hover{
+            transform: rotate(360deg) scale(1.05);
+            background-color: lightcoral;
+        }
+
+        /*Botão 5: Estilo Basico para todos os botões*/
+
+        .btn-with-image{
+            background-color: lightskyblue;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-with-image img{
+            width:  20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .btn-with-image:hover{
+            background-color: rgb(111, 178, 201);
+            
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <button class="btn btn1">Sombra e Zoom</button>
+    <button class="btn btn2">Inverter Cores</button>
+    <button class="btn btn3">Deslize</button>
+    <button class="btn btn4">Rotação</button>
+
+    <!-- Botão com imagem -->
+    <button class="btn-with-image">
+        <img src="020- Icone.png" alt="Ícone"> <!-- Substitua "icon.png" pelo caminho da sua imagem -->
+        Botão com Imagem
+    </button>
+
+</body>
+
+</html>
