@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apresentação de Slides</title>
+<style>
+    :root {
+        --slideshow-width: 300px;
+        --btn-color: white;
+        --btn-hover-bg: #f1f1f1;
+        --btn-hover-color: black;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .mySlides {
+        display: none;
+        transition: opacity 0.6s ease;
+    }
+
+    img {
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    /* Recipiente de apresentação de slides */
+    .slideshow-container {
+        max-width: var(--slideshow-width);
+        position: relative;
+        margin: auto;
+    }
+
+    /* Botões Próximo e Anterior */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: var(--btn-color);
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 3px;
+        user-select: none;
+    }
+
+    /* Posicione o "botão próximo" à direita */
+    .next {
+        right: 0;
+    }
+
+    /* Ao passar o mouse, adicione uma cor de fundo */
+    .prev:hover, .next:hover {
+        background-color: var(--btn-hover-bg);
+        color: var(--btn-hover-color);
+    }
+
+    h2 {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h2>Apresentação de Slides</h2>
+
+<div class="slideshow-container">
+    <div class="mySlides" aria-hidden="true">
+        <img src="svy5fchleno11.png" alt="Imagem de paz">
+    </div>
+    <div class="mySlides" aria-hidden="true">
+        <img src="Swing_Day_Legal.jpg" alt="Imagem de paz">
+    </div>
+    <div class="mySlides" aria-hidden="true">
+        <img src="marvels-spider-man-003.jpg" alt="Imagem de paz">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)" aria-label="Slide anterior">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)" aria-label="Próximo slide">&#10095;</a>
+</div>
+
+<!--JavaScript-->
+<script>
+    let slideindex = 1; //Iniciando o indice do slide//
+    showSlides(slideindex); //Significa que o9 primeiro slide sera mostrado quando a pagina for carregada//
+    
+    function plusSlides(n) {
+        showSlides(slideindex += n);
+        // A função e´chamada quando botões de proximo ou anterior foram clicados
+    }
+
+    function showSlides(n) {
+        let i;
+        let x = document.getElementsByClassName("mySlides")
+    
+    //Essa função é responsavel por mostrar o slide correspondente ao indice
+
+    if ( n > x.lenght) {slideindex = 1;} //Se o indice for maior que o numero de slides, reinicia para 1
+    if (n < 1) {slideindex = x.length} // Se o indice for menor que 1, vai para o ultimo slide
+   for (i = 0; i < x.length; i++){
+    x[i]. style.display = "none"; // ocultar todos os slides
+    }
+    x[slideindex - 1].style.display ="block"; //Exibe o slide atual
+}
+</script>
+
+</body>
+</html>

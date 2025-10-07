@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: rgb(179, 98, 67);
+    color: whitesmoke;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*   HEADER   */
+
+header{
+    background-color: lightsalmon;
+    padding: 20px 0;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+/*     NAVBAR    */
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li{
+    margin: 0 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+
+}
+
+
+/*     CONTEÚDO    */
+main{
+    padding: 20px;
+}
+
+h2{
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+
+section{
+    margin-bottom: 40px;
+}
+article{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*    IMAGENS    */ 
+
+img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tamanho{
+    width: 370px;
+    height: 250px;
+}
+
+.gallery{
+    display: flex;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 32%;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+/*   FORMULARIO   */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label{
+    margin-top: 10px;
+}
+
+form imput,
+form textarea{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+button:hover{
+    background-color: brown;
+}
+
+/*          FOOTER          */
+
+footer{
+    text-align: center;
+    padding: 15px;
+    background-color: brown;
+    color: white;
+}

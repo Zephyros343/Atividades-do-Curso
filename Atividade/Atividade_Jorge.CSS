@@ -1,0 +1,38 @@
+
+#nav a{
+    color: rgb(94, 54, 3);
+    text-align: center;
+
+ }
+
+ nav  a{
+  font-family: "Playwrite AU SA", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  color: rgb(44, 23, 4);
+  padding: 10px 15px;
+  margin: 20px;
+  display: inline-block;
+  margin-bottom: 0;
+  border-radius: 15px;
+  background-color: rgb(194, 131, 49);
+  border-style: groove;
+
+}
+
+nav a:hover{
+  background-color: rgb(160, 100, 22);
+  border-radius: 5px;
+}
+
+nav {
+    text-align: center;
+    
+}
+body {
+    background-color: sandybrown;
+    
+  }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Pesquisa de Inscrição no Curso</h1>
+    <p>____________________________________________________________________</p>
+    
+    <h2>Informações Gerais</h2>
+    <form>
+
+        <label for="Nome">Primeiro Nome:</label>
+        <input type="text" id="PrimeiroNome" name="Nome" placeholder="Primeiro Nome" required>
+        <br><br>
+
+
+        <label for="UltimoNome"> Ultimo Nome:</label>
+        <input type="text" id="UltimoNome" name="Nome" placeholder="Ultimo Nome" required>
+        <br><br>
+        
+        <label for="CPF">CPF:</label>
+        <input type="text" id="CPF" name="CPF"
+        placeholder="Insira o CPF" required>
+        <br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"
+        placeholder="Digite seu E-mail" min="0" max="120"
+        <br><br><br>
+
+        <label for="data">Data de Nascimento:</label>
+        <input type="date" id="data" name="data"
+        placeholder="Data de Nasc." min="0" max="120"
+        <br><br><br>
+
+        <label for="fone">Telefone:</label>
+        <input type="tel" id="fone" name="fone"
+        placeholder="Seu Telefone" min="0" max="120"
+
+        <br><br><br>
+
+        <label for="genero">Gênero:</label>
+        <select id="genero">
+            <optgroup label="Gênero">
+                <option value="Masc">Maculino</option>
+                <option value="Fem">Feminino</option>
+                <option value="NonB">Não-Binário</option>
+                <option value="none">Prefiro não dizer</option>
+            </optgroup>
+        </select>
+ <Br><br>
+
+
+    <label for="escola">Escolaridade:</label>
+        <select id="escola">
+            <optgroup label="Escolaridade">
+                <option value="Basica">Educação Básica</option>
+                <option value="Media">Ensino Médio</option>
+                <option value="Superior">Educação Superior</option>
+                <option value="graduacao">Pós-Graduação</option>
+            </optgroup>
+        </select>
+   <br>
+<p>____________________________________________________________________</p>
+
+<h1>Informações Socioeconômicas</h1>
+
+    <label for="renda">Faixa de renda familiar:</label>
+        <select id="renda">
+            <optgroup label="Renda">
+                <option value="min">1 Salário minimo</option>
+                <option value="med">Até 3 salários minimos</option>
+                <option value="hig">Entre 5.000 e 9.999</option>
+                <option value="ult">10.000+</option>
+            </optgroup>
+        </select>
+        <br><br>
+
+        <label for="emprego">Situação de Emprego:</label>
+        <select id="emprego">
+            <optgroup label="Situação">
+                <option value="emp">Empregado</option>
+                <option value="Des">Desempregado</option>
+                <option value="Aut">Autônomo</option>
+                <option value="Est">Estudante</option>
+            </optgroup>
+        </select>
+        <br>                                                                 
+    <p>____________________________________________________________________</p>
+
+<h1>Informações Profissionais</h1>
+
+    <label>
+        <strong>Qual seu nivel de Programador?</strong>
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="nivel" valor="iniciante" checked> Nenhum Conhecimento
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="nivel" valor="basico" checked> Básico
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="nivel" valor="medio" checked> Intermediario
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="nivel" valor="Avançado" checked> Avançado
+    </label>
+<br><br>
+<label>
+    <strong> Selecione sua área de interesse:</strong>
+
+</label><br>
+<input type="checkbox" id="tecnolodia1" name="tecnologia1" value="prog">
+<label for="tecnologia">Programação</label>
+
+</label><br>
+<input type="checkbox" id="tecnolodia2" name="tecnologia2" value="Des">
+<label for="tecnologia2">Design</label>
+
+</label><br>
+<input type="checkbox" id="tecnolodia3" name="tecnologia3" value="Redes">
+<label for="tecnologia3">Redes de Computadores</label>
+
+</label><br>
+<input type="checkbox" id="tecnolodia4" name="tecnologia4" value="SQL">
+<label for="tecnologia4">Banco de Dados</label>
+
+</label><br>
+<input type="checkbox" id="tecnolodia5" name="tecnologia5" value="IA">
+<label for="tecnologia5">Inteligencia Artificial</label>
+<br><br>
+<form action="/upload-arquivo" method="post" ectype="multipart/form-data">
+<br>    
+    <label for="arquivo">Enviar Documento original: </label>
+    <input type="file" id="arquivo" name="arquivo" required>
+    <br>
+    <P>____________________________________________________________________</P>
+<br>
+<form action="/processar_formulario" method="post">
+    <label for="mensagem"> Informações adicionais (Limite de 100 caracteres)</label>
+    <br>
+    <textarea id="mensagem" name="mensagem" rows="4" cols="50" maxlength="100"></textarea>
+    <BR>
+
+
+
+
+<a href="https://inteligenciaiaartificial.com.br/termos-de-uso-e-politica-de-privacidade/?gad_source=1&gbraid=0AAAAADinO6d-2ZkfxNeTz8K96fOVzxVGI&gclid=EAIaIQobChMIgIKigqvujAMVByVECB1wngieEAAYAiAAEgK01vD_BwE"><strong>POLITICA DE PRIVACIDADE</strong></a>
+<BR><BR>
+
+
+
+    <input type="submit" value="Enviar Formulario">    
+    </form>
+    
+
+</body>
+</html>
